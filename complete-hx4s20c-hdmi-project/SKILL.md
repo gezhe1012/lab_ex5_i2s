@@ -30,6 +30,7 @@ Treat the supplied project and board documentation as the source of truth. Imple
 6. Run `scripts/verify_project.ps1` after structural changes. Run it with `-RunSynthesis` after HDL changes and `-RunImplementation` before final handoff when the TD toolchain is available.
 7. Inspect synthesis and implementation output. Separate new failures from pre-existing warnings or timing exceptions. Never call a build successful merely because a `.bit` file already existed.
 8. Report what is proven in tools and what still requires board testing. Never claim physical HDMI, TF-card, key, audio, or power-cycle behavior without an on-board test.
+9. Save each completed iteration with `scripts/save_iteration.ps1`. The script verifies the project, creates a local Git commit, and attempts to push `origin/main`. If direct Git push fails, preserve the local commit and use the connected GitHub connector to upload the checkpoint to `gezhe1012/lab_ex5_i2s`; confirm the remote commit before claiming success. Read [versioning.md](references/versioning.md) for the exact command and commit conventions.
 
 ## HDL design rules
 
