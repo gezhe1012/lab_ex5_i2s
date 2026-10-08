@@ -1,0 +1,17 @@
+# Anlogic TD generated run outputs and logs
+**/*_Runs/
+**/log/
+**/.recent_user_depot.ini
+*.log
+*.logw
+*.qor
+*.rpt
+*.tmp
+*.bak
+
+# Tool/editor temporary files
+.vs/
+.vscode/
+*.swp
+Thumbs.db
+Desktop.ini
