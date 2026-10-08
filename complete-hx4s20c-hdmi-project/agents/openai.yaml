@@ -1,0 +1,5 @@
+﻿interface:
+  display_name: "HX4S20C HDMI赛题工程"
+  short_description: "完成并验证HX4S20C FPGA HDMI多媒体赛题工程"
+  default_prompt: "Use $complete-hx4s20c-hdmi-project to inspect this HX4S20C HDMI project, implement the remaining competition requirements, and verify the deliverables."
+
