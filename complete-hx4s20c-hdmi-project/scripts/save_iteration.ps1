@@ -56,7 +56,7 @@ if ($Tag) {
 if (-not $NoPush) {
     git push -u origin HEAD:main
     if ($LASTEXITCODE -ne 0) {
-        Write-Warning 'Direct GitHub push failed. The local commit is preserved; ask Codex to upload this checkpoint through the GitHub connector.'
+        Write-Warning 'Direct GitHub push failed. The local commit is preserved; retry with GitHub Desktop or after fixing the network. Do not upload large binary project files one-by-one through a connector.'
         exit 2
     }
     if ($Tag) {

@@ -18,7 +18,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\complete-hx4s20c-hdmi-proj
 1. 运行结构检查和 BMP 资产检查；
 2. 将当前工程变更加入 Git；
 3. 创建本地提交；
-4. 尝试推送到 `origin/main`。
+4. 尝试通过 Git 推送到 `origin/main`。
 
 稳定版本可以追加标签：
 
@@ -27,9 +27,9 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\complete-hx4s20c-hdmi-proj
   -Message "feat: finish OSD and fade transition" -Tag v0.2
 ```
 
-## GitHub 连接器回退
+## GitHub 上传回退
 
-本机 Git HTTPS 推送受网络环境影响时，脚本仍会保留本地提交并返回退出码 `2`。此时在 Codex 中说“上传本次迭代到 GitHub”，Codex 应使用 GitHub 连接器把本地提交内容写入 `gezhe1012/lab_ex5_i2s` 的 `main`，然后读取远端提交确认上传成功。
+本机 Git HTTPS 推送受网络环境影响时，脚本仍会保留本地提交并返回退出码 `2`。优先在 GitHub Desktop 中重试 `Fetch origin`/`Push origin`，或先解决网络问题。对于本工程的音频、BMP、文档和 MIF 等大文件，不要用逐文件连接器上传，以免超过接口内容限制；连接器只适合小型文本文件或查看远端状态。
 
 ## 提交约定
 
